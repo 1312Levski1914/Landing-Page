@@ -1,0 +1,75 @@
+body {	
+    margin: 0px;
+    overflow: hidden;
+}
+
+.firstBird{
+    width: 15px;
+    height:15px;
+    background-image: url(./ooneBird.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position:fixed;
+    z-index: 1;
+}
+.secondBird{
+    width: 15px;
+    height:15px;
+background-image: url(./ooneBird.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position:fixed;
+    z-index: 1;
+}
+.tirthBird{
+    width: 15px;
+    height:15px;
+    background-image: url(./ooneBird.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position:fixed;
+    z-index: 1;
+}
+.fourBird{
+    width: 15px;
+    height:15px;
+    background-image: url(./ooneBird.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position:fixed;
+    z-index: 1;
+}
+.fiveBird{
+    width: 15px;
+    height:15px;
+    background-image: url(./ooneBird.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position:fixed;
+    z-index: 1;
+}
+.sixBird{
+    width: 15px;
+    height:15px;
+    background-image: url(./ooneBird.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position:fixed;
+    z-index: 1;
+}
+.sevenBird{
+    width: 15px;
+    height:15px;
+    background-image: url(./ooneBird.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position:fixed;
+    z-index: 1;
+}
