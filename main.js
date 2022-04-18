@@ -1,36 +1,15 @@
+let videoBackground = document.getElementById('myVideo');
+let btnVideo = document.getElementById('btnVideo');
+let videoContainer = document.getElementById('musicVideo');
+let video = document.getElementById('video');
 
-$(document).ready(function(){
-    animateBird('.firstBird');
-    animateBird('.secondBird');
-    animateBird('.tirthBird');
-    animateBird('.fourBird');
-    animateBird('.fiveBird');
-    animateBird('.sixBird');
-    animateBird('.sevenBird');
-
+btnVideo.addEventListener('click',function(){
+    if(videoContainer.style.display !== 'block'){
+        videoContainer.style.display = 'block';
+        video.play();
+    }else{
+        videoContainer.style.display = 'none';
+        video.pause();
+        
+    }
 })
-
-function birdFly(){
-    let hView = $(window).height() - 50;
-    let wView = $(window).width() - 50;
-    let nh = Math.floor(Math.random() * hView);
-    let nw = Math.floor(Math.random() * wView);
-    return [nh,nw];
-}
-function animateBird(myclass){
-    let newDirect = birdFly();
-    $(myclass).animate({top: newDirect[0], left: newDirect[1]},
-        10000, function(){
-            animateBird(myclass);
-        });
-};
-$(".birdOnTarget").mouseenter(function () {
-
-    $(this).animate({
-        top: Math.random() * 300
-    }, 15250);
-    $(this).animate({
-        left: Math.random() * 300
-    }, 15250);
-
-});

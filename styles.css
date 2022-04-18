@@ -1,75 +1,200 @@
-body {	
-    margin: 0px;
-    overflow: hidden;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
 }
 
-.firstBird{
-    width: 15px;
-    height:15px;
-    background-image: url(.bird-flying.gif);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position:fixed;
-    z-index: 1;
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 300px;
 }
-.secondBird{
-    width: 15px;
-    height:15px;
-    background-image: url(./ooneBird.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position:fixed;
-    z-index: 1;
+span{
+    font-size: 16px;
 }
-.tirthBird{
-    width: 15px;
-    height:15px;
-    background-image: url(./ooneBird.jpg);
-    background-size: cover;
-    background-position: center;
+h1{
+    font-weight: 700;
+    text-align: center;
+    font-size: 40px;
+    font-family: Hack, sans-serif;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #000, #fff, #000);
+    letter-spacing: 5px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     background-repeat: no-repeat;
-    position:fixed;
-    z-index: 1;
+    background-size: 80%;
+    animation: shine 5s linear infinite;
+    position: relative;
+    top: -500px;
 }
-.fourBird{
-    width: 15px;
-    height:15px;
-    background-image: url(./ooneBird.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position:fixed;
-    z-index: 1;
+  
+  @keyframes shine {
+    0% {
+      background-position-x: -500%;
+    }
+    100% {
+      background-position-x: 500%;
+    }
+  }
+
+#myVideo{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 0;
 }
-.fiveBird{
-    width: 15px;
-    height:15px;
-    background-image: url(./ooneBird.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position:fixed;
-    z-index: 1;
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,900');
+
+:root {
+  --text-color: hsla(210, 50%, 85%, 1);
+  --shadow-color: hsla(210, 40%, 52%, .4);
+  --btn-color: hsl(210, 80%, 42%);
+  --bg-color: #141218;
 }
-.sixBird{
-    width: 15px;
-    height:15px;
-    background-image: url(./ooneBird.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position:fixed;
-    z-index: 1;
+
+* {
+  box-sizing: border-box;
 }
-.sevenBird{
-    width: 15px;
-    height:15px;
-    background-image: url(./ooneBird.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position:fixed;
-    z-index: 1;
+
+html, body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color);
+}
+
+button {
+  position:relative;
+  top: 150px;
+  padding: 10px 20px;  
+  border: none;
+  background: none;
+  cursor: pointer;
+  
+  font-family: "Source Code Pro";
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 30px;  
+  color: var(--text-color);
+  
+  background-color: var(--btn-color);
+  box-shadow: var(--shadow-color) 2px 2px 22px;
+  border-radius: 4px; 
+  z-index: 0;  
+  overflow: hidden;   
+}
+
+button:focus {
+  outline-color: transparent;
+  box-shadow: var(--btn-color) 2px 2px 22px;
+}
+
+.right::after, button::after {
+  content: var(--content);
+  display: block;
+  position: absolute;
+  white-space: nowrap;
+  padding: 40px 40px;
+  pointer-events:none;
+}
+
+button::after{
+  font-weight: 200;
+  top: -30px;
+  left: -20px;
+} 
+
+.right, .left {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.right {
+  left: 66%;
+}
+.left {
+  right: 66%;
+}
+.right::after {
+  top: -30px;
+  left: calc(-66% - 20px);
+  
+  background-color: var(--bg-color);
+  color:transparent;
+  transition: transform .4s ease-out;
+  transform: translate(0, -90%) rotate(0deg)
+}
+
+/* bubbles */
+button::before {
+  content: '';
+  pointer-events: none;
+  opacity: .6;
+  background:
+    radial-gradient(circle at 20% 35%,  transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+    radial-gradient(circle at 75% 44%, transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+    radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, var(--text-color) 5px, var(--text-color) 6px, transparent 6px);
+
+  width: 100%;
+  height: 300%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: bubbles 5s linear infinite both;
+}
+
+@keyframes bubbles {
+  from {
+    transform: translate();
+  }
+  to {
+    transform: translate(0, -66.666%);
+  }
+}
+#musicVideo{
+    position: absolute;
+    top: 35%;
+    left: 25px;
+    width: 340px;
+    height: 40%;
+    display: none;
+
+}
+@media screen and (min-width: 600px)  {
+    #myVideo{
+        width: 100%;
+
+    }
+    #video{
+        width: 1000px;
+        position: relative;
+        top: -100px;
+        left: 30%;
+    }
+    #btnVideo{
+        left: 600px;
+    }
+    
+    button:hover .right::after {
+    transform: translate(0, -47%) rotate(0deg)
+    }
+  
+    button .right:hover::after {
+    transform: translate(0, -50%) rotate(-7deg)
+    }
+  
+    button .left:hover ~ .right::after {
+    transform: translate(0, -50%) rotate(7deg)
+    }
+  
 }

@@ -9,17 +9,25 @@
     <title>Kue West</title>
     <link rel="stylesheet" href="./styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--We took the button animation from https://codepen.io/abhishekbaiju/pen/joXzOw   -->
 </head>
 <body>
-
-    <div class="firstBird birdOnTarget"></div>
-    <div class="secondBird birdOnTarget"></div>
-    <div class="tirthBird birdOnTarget"></div>
-    <div class="fourBird birdOnTarget"></div>
-    <div class="fiveBird birdOnTarget"></div>
-    <div class="sixBird birdOnTarget"></div>
-    <div class="sevenBird birdOnTarget"></div>
-    
+    <main>
+        <video autoplay muted loop id="myVideo">
+            <source src="backgroundBeach.mp4" type="video/mp4">
+        </video>
+        <section>
+            <h1>Tue West <br> <span> We took a bite </span></h1>
+        </section>
+        <button id="btnVideo" style="--content: 'Watch Video';">
+            <div class="left"></div>
+              Watch Video
+            <div class="right"></div>
+        </button>
+          <div id="musicVideo">
+              <video id="video" width="340px"  src="./WeTookaBiteDemo.mp4"></video>
+          </div>
+    </main>
     <script src="main.js"></script>
 </body>
 </html>
