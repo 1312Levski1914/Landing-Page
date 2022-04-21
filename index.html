@@ -9,24 +9,25 @@
     <title>Kue West</title>
     <link rel="stylesheet" href="./styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!--We took the button animation from https://codepen.io/abhishekbaiju/pen/joXzOw   -->
 </head>
 <body>
     <main>
         <video autoplay muted loop id="myVideo">
             <source src="backgroundBeach.mp4" type="video/mp4">
         </video>
-        <section>
+        <section class="h1">
             <h1>Tue West <br> <span> We took a bite </span></h1>
         </section>
-        <button id="btnVideo" style="--content: 'Watch Video';">
-            <div class="left"></div>
-              Watch Video
-            <div class="right"></div>
-        </button>
+        <button id="btnVideo" class="btn">Watch Video</button>
           <div id="musicVideo">
               <video id="video" width="340px"  src="./WeTookaBiteDemo.mp4"></video>
           </div>
+          <footer>
+              <section class="footer">
+                  <p>Video credits to <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.pexels.com%2F%40anastasia-shuraeva%3Futm_content%3DattributionCopyText%26utm_medium%3Dreferral%26utm_source%3Dpexels%26fbclid%3DIwAR1menitqVoylKb7-t2kM17MzA0BTIN5J-BNdylildTDCHatlswgMR1lWBI&h=AT16jcg_IPC2q7jjeVEnenemKC2VdqdKRw5YX0Ku6U8CgFzdAgMAeJ1RGBepKWgyIbPyrZKJvtdXACFgOGmw2D0t81tyI0lZrO8Vbmb59sNfYC1opyZ8Snm5AEzVZQr2Vs5wGA">Anastasia Shuraeva</a>
+                    from <a href="https://www.pexels.com/photo/man-and-woman-standing-on-a-stone-jetty-7538796/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels&fbclid=IwAR2J1m_zgtv-Y_9iOgftxUUj43BFBE5NBhwfFdfC1XjhT2D-D93wD65a4O0">Pexels</a></p>
+              </section>
+          </footer>
     </main>
     <script src="main.js"></script>
 </body>
